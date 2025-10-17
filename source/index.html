@@ -1,9 +1,30 @@
 ---
 title: Assignment 2 Template
+tags: home
 ---
-<h1>Assignment 2 Template</h1>
+<h1>Valentin's Archive</h1>
 
-<p>
-  This is a main page for your collection site. You can edit
-  its contents and add new pages to this folder.
-</p>
+<h2>
+A collection of works from M.Valentin.
+<h2>
+
+
+
+{% for cover in collections.cover %}
+    {{ cover.data.title }}
+<div class="CoverListBox">
+    
+    <div class="coverList">
+     
+      <a href="{{ cover.url }}">
+      
+        <img src="/covers/{{ cover.data.photo }}" />
+      </a>
+    </div>
+
+  </div>
+      {% endfor %}
+
+  
+
+  
